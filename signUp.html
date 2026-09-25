@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAY KLASSIC FURNISHINGS</title>
+    <link rel="stylesheet" href="signUp.css">  
+
+</head>
+<body> 
+    <section>
+        <div class="div1"><h1>Jay Klassic Furnishing And Interiors</h1></div>
+        <div class="div2">
+            <div class="div3">
+                <p class="p1">SIGN UP</p>    
+                <div class="div3b">
+                <form action="landing page.html" onsubmit="return checkPasswordMatch()">
+                <label for="text">FULL NAME</label><br>
+                <input type="text"  id="fullName"> <br>
+                <label for="text">EMAIL</label><br>
+                <input type="email" id="email"><br>
+                <label for="text">USERNAME</label><br>
+                <input type="text" id="myUsername"> <br>
+                <label for="text">PASSWORD</label><br>
+                <input type="password" id="password" name="password" required> <br>
+                <label for="text">CONFIRM PASSWORD</label><br>
+                <input type="password" id="cpassword" name="cpassword" required><br>
+                <p id="message"></p>
+                <button type="submit" id="mybtn"><strong>SIGN UP</strong></button> </div> 
+                 </form>
+            </div>  
+            <div class="div4"><img src="images/a28.jpeg" alt=""></div>
+        </div>
+        <div class="div5">Have an account already? Click <a href="signIn.html">Here </a>to sign in</div>
+
+    </section>
+
+    <script>  
+
+        let fullName;
+
+            document.getElementById("mybtn").onclick = function(){
+            fullName = document.getElementById("fullName").value;
+
+                 while(fullName == ""  ){
+                alert("Please, fill in all the details"); break;  
+                } 
+            }
+        let email; 
+
+            document.getElementById("mybtn").onclick = function(){
+            email = document.getElementById("email").value;
+
+                while(email == ""  ){
+                alert("Please, fill in all the details"); break;  
+                } 
+            }
+        let username;
+
+                document.getElementById("mybtn").onclick = function(){
+                username = document.getElementById("myUsername").value;
+
+                 while(username == ""  ){
+                alert("Please, fill in all the details"); break;  
+                } 
+            }
+        let password;
+
+            document.getElementById("mybtn").onclick = function(){
+            password = document.getElementById("password").value;
+
+                while(password == ""  ){
+                alert("Please, fill in all the details"); break;  
+                } 
+            }
+        let cpassword;
+
+            document.getElementById("mybtn").onclick = function(){
+            cpassword = document.getElementById("cpassword").value;
+
+                while(cpassword == ""  ){
+                alert("Please, fill in all the details"); break;  
+                } 
+            } 
+      
+             
+           
+        function checkPasswordMatch(){
+        const password = document.getElementById("password").value;
+
+        const cpassword = document.getElementById("cpassword").value;
+
+        const message = document.getElementById("message");
+
+
+        if(password === cpassword){
+            message.textContent = "Passwords Match";
+            message.style.color = "green"
+            return true;
+        } else{
+            message.textContent = "Passwords mismatch";
+            message.style.color = "red"
+            return false;
+        }
+    }
+
+          
+    </script>
+</body>
+</html>

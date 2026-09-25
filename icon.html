@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .div2b{
+            display: flex;
+            background-color: blue;
+            margin: auto;
+            justify-content: space-between ;
+            padding: 20px;
+            text-align: center;
+        }
+        
+    /*/    .div2bi:not(:last-child)::before{
+            content: " ";
+            background: green;
+            position: absolute;
+            width: 2px;
+            height: 4em;
+            top: 75px;
+            transform: translateY(-50%);
+            margin-left: 25%;
+        } /*/
+        #slider{
+            height: 300px;
+            width: 500px;
+        }
+        #slideImg{
+            height: 100%;
+            width: 100%;
+        }
+
+        nav{
+    color: red;
+    padding: 15px 30px  15px 30px;
+    display: flex;
+    height: 40px;
+    text-align: center;
+    padding-top: 15px;
+    justify-content: space-between;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    align-items:center;
+}
+.leftNav, .middleNav, .rightNav{
+    list-style-type:none;
+}
+.leftNav li, .middleNav li, .rightNav li{
+    display: inline-block; 
+    position: relative;
+}
+.leftNav li a, .middleNav li a, .rightNav li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: rgb(245, 10, 10);
+    cursor: default;
+    
+}
+.leftNav li a{
+    color: yellow;
+}
+.middleNav li a{
+    padding-left: 10px;
+}
+.rightNav li button {
+    padding: 10px 15px 7px 15px;
+    border-radius: 20px;
+    background-color: black;
+    border: 2px solid gray;
+}
+li a:hover{
+    color: blue;
+}
+.dropp{
+    display: none;
+}
+
+.rightNav li:hover .dropp{
+    display: block;
+    position: absolute;
+    background-color: rgb(0, 255, 115);
+    left: -10px;
+}
+.rightNav li:hover .dropp ul{
+    display: block;
+    padding-left: 0px;
+    padding-top: 10px;
+}
+.rightNav li:hover .dropp ul li{
+    width: 100px;
+    padding-top: 3px;
+    padding-left: 0px;
+
+}
+#myCanvas{
+    border: 3px solid blue;
+}
+input{
+    border: none;
+    background-color: greenyellow;
+}
+#myCanvas4{
+    background-color: aqua;
+width: 200px;
+}
+.img8{
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    margin-left: 30px;
+    background-color: aqua;
+}
+.j1{
+    background-color: aqua;
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin-left: 25px;
+    position: absolute;
+}
+.j2{
+    background-color: rgb(65, 206, 30);
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 90px;
+    width: 100px;
+    position: absolute;
+}
+.jj{
+    display: flex;
+    position: relative;
+}
+    </style>
+    
+</head>
+<body>
+    <header class="mobile">
+        <nav>
+            <ul class="leftNav">
+                <li><a href="">JKF</a></li> </ul>
+            <ul class="middleNav">
+                <li><a href="">JAY KLASSIC FURNISHINGS</a></li> </ul>
+            <ul class="rightNav">
+                <li> <a href="">drop</a>
+                    <div class="dropp">
+                        <ul>
+                            <li><a href="company.html" id="ad">Company</a></li>
+                            <li><a href="home.html" id="ad">Home</a></li>
+                            <li><a href="aboutUs.html" id="ad">About Us</a></li>
+                            <li><a href="contact.html" id="ad">Contact</a></li> </ul>
+                        
+                        </ul>
+                    </div>
+                </li> 
+            </ul>
+        </nav>
+    </header>
+    <canvas id="myCanvas" width="400" height="200"></canvas>  
+    <div class="div5bii">
+        <canvas id="myCanvas4"  height="200"></canvas>  
+        <img src="images/w131.jpg" alt="" class="img8">
+    </div> 
+    <div class="jj">
+        <div class="j1"></div>
+        <div class="j2"></div>
+
+    </div>
+
+    <script>
+        const counters = document.querySelectorAll(".div2bi span");
+        const countainer = document.querySelector(".div2bi");
+        let activated = false;
+
+        window.addEventListener("click", ()=>{
+            if (activated === false) {
+                counters.forEach(counter => {
+                    counter.innerText = 0;
+
+                    let count = 0;
+
+                    function updateCount() {
+                        const target = parseInt(counter.dataset.count);
+                        if (count < target){
+                            count++;
+                            counter.innerText = count;
+                            setTimeout(updateCount, 10);
+
+                        } else{
+                            counter.innerText = target;
+
+                        }
+                    }
+                    updateCount()
+                    activated = true
+                })
+            }
+        })
+
+        const images = ["images/images (1) (1).jpeg", "images/images2.jpeg", "images/images3.jpeg", "images/images4.jpeg" ];
+        let currentIndex = 0;
+
+        function changeImage(){
+            currentIndex = (currentIndex +1)%
+            images.length;
+
+            document.getElementById("slideImg").src = images[currentIndex];
+        }
+        setInterval(changeImage, 3000)
+
+        let canvas = document.getElementById("myCanvas");
+      let context = canvas.getContext("2d");
+
+      context.strokeStyle = "blue";
+      context.beginPath();
+      context.moveTo(0, 100);
+      context.lineTo(100, 100);
+      context.lineTo(105, 90);
+    context.lineTo(110, 100);
+     /*   context.lineTo(120, 80);
+      context.lineTo(120, 80);
+      context.lineTo(120, 80);
+      context.lineTo(120, 80);
+      context.lineTo(120, 80);*/
+
+      context.stroke();
+      
+      let canvas4= document.getElementById("myCanvas4");
+      let context4 = canvas4.getContext("2d");
+
+      context4.fillStyle = "gray";
+      context4.strokeStyle = "darkblue";
+      context4.lineWidth = 5
+      context4.beginPath();
+      //context4.arc(0, 0, 50, 0, 2 * Math.PI);
+     // context4.arc(50, 50, 25, 0, 2 * Math.PI);
+      context4.arc(100, 100, 70, 0, 2 * Math.PI);
+      context4.fillRect(0, 0, 50, 50);
+      context4.stroke();
+      context4.fill();
+      
+      </script>
+</body>
+</html>

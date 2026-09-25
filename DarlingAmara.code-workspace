@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../DarlingAmara"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../Learn JS"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "DarlingAmara"
+	}
+}
