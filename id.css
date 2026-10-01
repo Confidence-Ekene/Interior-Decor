@@ -903,6 +903,7 @@ footer::before {
 
 .div6c a,
 .div6d a,
+
 .div6e a,
 .div6f a,
 .div6g a {
@@ -1454,4 +1455,21 @@ position: absolute;
         height: 300px;
     }
     
+}
+
+/* =========================
+   CONTACT PAGE
+========================= */
+.contact{
+    width: 50%;
+    margin-top: 7rem;
+}
+.contactFooter {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.contact1 h1{
+    color: whitesmoke;
 }
