@@ -1457,12 +1457,14 @@ position: absolute;
     
 }
 
+
 /* =========================
    CONTACT PAGE
-========================= */
-.contact{
+========================= 
+.contactSection{
     width: 50%;
     margin-top: 7rem;
+    color: red;
 }
 .contactFooter {
     position: fixed;
@@ -1472,4 +1474,247 @@ position: absolute;
 }
 .contact1 h1{
     color: whitesmoke;
+} */
+
+
+
+/* =========================
+   CONTACT CONTAINER
+========================= */
+
+.contactSection {
+    background: url("images/w87.jpg") no-repeat center;
+    background-size: cover;
+    width: 50%;
+    height: 500px;
+    margin:  10rem auto 10rem auto;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================
+   GET IN TOUCH
+========================= */
+
+.contact1 {
+    width: 100%;
+    height: 60px;
+
+    text-align: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+.contact1 h1 {
+    margin: 0;
+    padding-top: 0;
+
+    color: white;
+    font-size: 32px;
+}
+
+
+/* =========================
+   LEFT + RIGHT CONTENT
+========================= */
+
+.contact2 {
+    display: flex;
+    
+    width: 100%;
+
+    margin: 20px auto 0;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.contact3 {
+    width: 50%;
+    height: 330px;
+
+    color: white;
+
+    padding-left: 25px;
+}
+
+.contact3 .contacth3 {
+    color: rgb(42, 50, 165);
+
+    padding-bottom: 5px;
+
+    font-size: 25px;
+}
+
+.contact3 .contactP {
+    font-size: 16px;
+}
+
+
+/* LEFT SIDE SPACING */
+
+.contact6d,
+.contact6c,
+.contact6e {
+    padding: 5px 0 10px;
+}
+
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+
+.div6c1 {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 10px;
+}
+
+.div6c1 li {
+    list-style: none;
+}
+
+.div6c1 a {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(42, 50, 165);
+
+    color: white;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+}
+
+.div6c1 a:hover {
+    background-color: black;
+}
+
+
+/* =========================
+   RIGHT FORM
+========================= */
+
+.contact4 {
+    width: 50%;
+    height: 291px;
+
+    background-color: aliceblue;
+
+    margin: 0 25px 0 0;
+
+    padding: 25px 50px;
+
+    box-sizing: border-box;
+}
+
+
+/* FORM CONTENT */
+
+.contact4a {
+    width: 100%;
+    height: auto;
+
+    margin: 0;
+}
+
+.contact4a p {
+    margin: 0 0 15px;
+
+    font-size: 20px;
+}
+
+
+/* LABELS */
+
+.contact4a label {
+    font-size: 14px;
+}
+
+
+/* INPUTS */
+
+.contactInput {
+    width: 100%;
+
+    margin: 5px 0 0;
+
+    padding: 5px 0;
+
+    border: none;
+
+    border-bottom: 1px solid #999;
+
+    background-color: transparent;
+
+    outline: none;
+}
+
+
+/* MESSAGE BOX */
+
+.contactInput.b {
+    height: 60px;
+
+    width: 100%;
+
+    resize: none;
+}
+
+
+/* HR */
+
+.contact4 hr {
+    margin: 5px 0 10px;
+
+    border: none;
+
+    border-top: 1px solid #aaa;
+}
+
+
+/* INPUT FOCUS */
+
+.contactInput:focus {
+    outline: none;
+
+    border-bottom: 1px solid rgb(42, 50, 165);
+}
+
+
+/* SEND BUTTON */
+
+.sendbtn {
+    margin-top: 10px;
+    padding: 8px 10px;
+    background-color: rgb(42, 50, 165);
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sendbtn:hover {
+    background-color: black;
+}
+.contactFooter {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
