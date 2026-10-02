@@ -1482,26 +1482,6 @@ position: absolute;
 
 
 /* =========================
-   CONTACT PAGE
-========================= 
-.contactSection{
-    width: 50%;
-    margin-top: 7rem;
-    color: red;
-}
-.contactFooter {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-.contact1 h1{
-    color: whitesmoke;
-} */
-
-
-
-/* =========================
    CONTACT CONTAINER
 ========================= */
 
@@ -1736,17 +1716,14 @@ position: absolute;
     background-color: black;
 }
 .contactFooter {
-    position: fixed;
-    bottom: 0;
+    position: relative;
+    bottom: auto;
     left: 0;
     width: 100%;
 }
 
 /* =========================================================
    RESPONSIVE OVERRIDES
-   Added without changing the HTML structure.
-   These rules consolidate the layout behaviour at the
-   main responsive breakpoints.
 ========================================================= */
 
 /* ---------- GLOBAL RESPONSIVE SAFETY ---------- */
@@ -2903,6 +2880,5 @@ p {
 }
 
 
-/* =========================================================
-   NAVIGATION
-========================================================= */
+
+
