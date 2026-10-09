@@ -62,8 +62,7 @@ animated.forEach(animate => {
 })
 const year = new Date().getFullYear();
 
-document.getElementById("div6h").textContent = `© ${year} Jay Klassic Furniture. All Rights Reserved.`;
-
+document.getElementById("div6h").textContent = `© ${year} CD Atelier. All Rights Reserved.`;
 
 
 
